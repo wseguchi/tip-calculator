@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 20px;
+    text-align: center;
+    background-color: hsl(185, 41%, 84%); /* Light grayish cyan */
+    font-family: 'Space Mono', monospace;
+    font-weight: 700;
+}
+
+.main {
+    width: 100%;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.calculator {
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 15px;
+    text-align: center;
+    padding: 15px;
+}
+
+.input {
+    width: 50%;
+    padding: 15px;
+    color: hsl(184, 14%, 56%);
+}
+
+.output {
+    width: 50%;
+    background-color: hsl(183, 100%, 15%);
+    border-radius: 15px;
+    padding: 15px;
+}
+
+.input-bill, .input-people {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    background-color: hsl(189, 41%, 97%);
+    padding: 100;
+    border-radius: 5px;
+}
+
+.icon-dollar, .icon-person {
+    text-align: left;
+    padding: 3px 10px;
+    align-items: center;
+}
+
+.bill-value > input, .people-value > input {
+    border: none;
+    height: 100%;
+    text-align: right;
+    padding: 3px 10px;
+    background-color: transparent;
+    font-family: 'Space Mono', monospace;
+    font-weight: 700;
+    color: hsl(184, 14%, 56%);
+}
+
+.buttons-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.custom-input {
+    width: 100px;
+}
+
+.buttons-grid > div {
+    flex: 1 1 25%;
+    margin: 5px;
+    border-radius: 5px;
+    background-color: hsl(183, 100%, 15%);
+}
+
+button, .custom-input{
+    cursor: pointer;
+    padding: 5px;
+    font-family: 'Space Mono', monospace;
+    font-weight: 700;
+    font-size: 20px;
+    border: none;
+    background-color: transparent;
+    color: white;
+}
+
+.attribution {
+    display: none;
+    font-size: 11px;
+}
