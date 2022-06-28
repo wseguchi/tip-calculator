@@ -15,7 +15,8 @@
       <div class="calculator">
         <div class="input">
           <div class="bill">
-            Bill
+            <p class="input-group-titles f-left">Bill</p>
+            <p class="zero-error-title"> Can't be zero!</p>
             <div class="input-bill">
               <div class="icon-dollar">
                 <img src="./images/icon-dollar.svg">
@@ -26,20 +27,21 @@
             </div>
           </div>
           <div class="select-tip">
-            Select Tip %
+            <p class="input-group-titles ">Select Tip %</p>
           </div>
           <div class="buttons-grid">
             <div><button>5%</button></div>
-              <div><button>10%</button></div>
-                <div><button>15%</button></div>
-                  <div><button>25%</button></div>
-                    <div><button>50%</button></div>
+            <div><button>10%</button></div>
+            <div><button>15%</button></div>
+            <div><button>25%</button></div>
+            <div><button>50%</button></div>
             <div>
               <input class="custom-input" type="text" id="fname" name="fname" value="Custom">
             </div>
           </div>
           <div class="number-of-people">
-            Number of People
+            <p class="input-group-titles f-left">Number of People</p>
+            <p class="zero-error-title"> Can't be zero!</p>
             <div class="input-people">
               <div class="icon-person">
                 <img src="./images/icon-person.svg">
@@ -51,15 +53,29 @@
           </div>
         </div>
         <div class="output">
-          <div class="tip-amount">
-            Tip Amount
-            / person
+          <div class="output-results">
+            <div class="tip-amount">
+              <div class="tip-amount-title">
+                <p class="output-box-title">Tip Amount</p>
+                <p class="output-per-person">/ person</p>
+              </div>
+              <div class="tip-amount-value">
+                $<span>0.00</span>
+              </div>
+            </div>
+            <div class="total-amount">
+              <div class="total-amount-title">
+                <p class="output-box-title">Total</p>
+                <p class="output-per-person">/ person</p>
+              </div>
+              <div class="total-amount-value">
+                $<span>0.00</span>
+              </div>
+            </div>
           </div>
-          <div class="total-amount">
-            Total
-            / person
+          <div class="output-btn-reset">
+            <button class="btn-reset">Reset</button>
           </div>
-          <button>Reset</button>
         </div>
       </div>
     </div>

@@ -6,6 +6,11 @@
     box-sizing: border-box;
 }
 
+a { 
+    text-decoration: none;
+    color:hsl(186, 14%, 43%);
+}
+
 body {
     margin: 20px;
     text-align: center;
@@ -14,15 +19,24 @@ body {
     font-weight: 700;
 }
 
+input {
+    width: 100% !important;
+}
+
 .main {
     width: 100%;
     flex-wrap: wrap;
     text-align: center;
 }
 
+.logo {
+    margin: 50px 0px;
+}
+
 .calculator {
     display: flex;
     width: 80%;
+    max-width: 700px;
     margin: 0 auto;
     background-color: white;
     border-radius: 15px;
@@ -33,26 +47,46 @@ body {
 .input {
     width: 50%;
     padding: 15px;
+    margin-right: 15px;
     color: hsl(184, 14%, 56%);
 }
 
 .output {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     width: 50%;
     background-color: hsl(183, 100%, 15%);
     border-radius: 15px;
     padding: 15px;
 }
 
+.input-group-titles {
+    text-align: left;
+    color: hsl(186, 14%, 43%);
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
 .input-bill, .input-people {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     width: 100%;
     background-color: hsl(189, 41%, 97%);
-    padding: 100;
     border-radius: 5px;
 }
 
+.tip-amount, .total-amount {
+    display: flex;
+    justify-content: space-between;
+}
+
+.bill, .buttons-grid {
+    margin-bottom: 30px;
+}
+
 .icon-dollar, .icon-person {
+    width: fit-content;
     text-align: left;
     padding: 3px 10px;
     align-items: center;
@@ -72,23 +106,24 @@ body {
 .buttons-grid {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
+    gap: 10px;
 }
 
 .custom-input {
     width: 100px;
+    text-align: center;
 }
 
 .buttons-grid > div {
-    flex: 1 1 25%;
-    margin: 5px;
+    width: 30%;
     border-radius: 5px;
     background-color: hsl(183, 100%, 15%);
 }
 
 button, .custom-input{
     cursor: pointer;
-    padding: 5px;
+    padding: 3px;
     font-family: 'Space Mono', monospace;
     font-weight: 700;
     font-size: 20px;
@@ -97,7 +132,68 @@ button, .custom-input{
     color: white;
 }
 
-.attribution {
-    display: none;
+.zero-error-title {
+    color: wheat;
     font-size: 11px;
+    float: right;
 }
+
+.total-amount, .tip-amount {
+    text-align: left;
+    align-items: center;
+    margin: 20px 10px;
+}
+
+.tip-amount-value, .total-amount-value {
+    color:hsl(172, 67%, 45%);
+    font-size: 36px;;
+}
+
+.output-box-title {
+    font-size: 14px;
+    color: white;
+}
+
+.output-per-person {
+    font-size: 12px;;
+    color:hsl(184, 14%, 56%);
+}
+
+.btn-reset {
+    width: 90%;
+    text-transform: uppercase;
+    background-color: hsl(184, 80%, 24%);
+    color:hsl(183, 100%, 15%);
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    padding: 5px;
+}
+
+.f-left{
+    float: left;
+}
+
+
+.attribution {
+    display: block;
+    margin-top: 25px;
+    font-size: 10px;
+    font-weight: 400;
+    color: hsl(184, 14%, 56%);
+
+}
+
+/* Color info: */
+
+# Very Strong Cyan {color: hsl(172, 67%, 45%);} 
+
+# Very dark cyan { color: hsl(183, 100%, 15%);}
+
+# Dark grayish cyan {color: hsl(186, 14%, 43%);}
+
+# Grayish cyan {color: hsl(184, 14%, 56%);}
+
+# Light grayish cyan {color: hsl(185, 41%, 84%);}
+
+# Very light grayish cyan {color: hsl(189, 41%, 97%);}
