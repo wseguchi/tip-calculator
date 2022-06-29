@@ -22,7 +22,7 @@
                 <img src="./images/icon-dollar.svg">
               </div>
               <div class="bill-value">
-                <input id="bill_value" type="text" placeholder="0" oninput="input('bill_value', 'billValue')">
+                <input id="bill_value" type="text" placeholder="0" oninput="input('bill_value', 'billValue')" onkeydown="return inputMaskNumbers(event)">
               </div>
             </div>
           </div>
@@ -36,7 +36,7 @@
             <div><button id="25p" value="25" onclick="btnGetTipPercentage('25p')">25%</button></div>
             <div><button id="50p" value="50" onclick="btnGetTipPercentage('50p')">50%</button></div>
             <div>
-              <input id="customp" class="custom-input" type="text" id="fname" name="fname" placeholder="Custom" oninput="return btnGetCustomTipPercentage(event)">
+              <input id="customp" class="custom-input" type="text" id="fname" name="fname" placeholder="Custom" onkeydown="return inputMaskNumbers(event)" oninput="btnGetTipPercentage('customp')">
             </div>
           </div>
           <div class="number-of-people">
@@ -47,7 +47,7 @@
                 <img src="./images/icon-person.svg">
               </div>
               <div class="people-value">
-                <input id="people_value" type="text" placeholder="0" oninput="input('people_value', 'peopleValue')">
+                <input id="people_value" type="text" placeholder="0" oninput="input('people_value', 'peopleValue')" onkeydown="return inputMaskNumbers(event)">
               </div>
             </div>
           </div>
@@ -60,7 +60,7 @@
                 <p class="output-per-person">/ person</p>
               </div>
               <div class="tip-amount-value">
-                $<span id="tip_amount_value">0.00</span>
+                <span id="tip_amount_value">$0.00</span>
               </div>
             </div>
             <div class="total-amount">
@@ -69,7 +69,7 @@
                 <p class="output-per-person">/ person</p>
               </div>
               <div class="total-amount-value">
-                $<span id="total_amount_value">0.00</span>
+                <span id="total_amount_value">$0.00</span>
               </div>
             </div>
           </div>

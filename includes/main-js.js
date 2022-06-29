@@ -32,13 +32,13 @@ function btnGetTipPercentage(id) {
     doTheMath();
 }
 
-function btnGetCustomTipPercentage(evt) {
+function inputMaskNumbers(evt) {
     evt = (evt) ? evt : window.event;
     var charCode = (evt.which) ? evt.which : evt.keyCode;
-    if (charCode > 31 && (charCode < 48 || charCode > 57)) {
-        return false;
+    if ((charCode > 7 && charCode < 58) || (charCode == 110) || (charCode == 190)) {
+        return true;
     }
-    return true;
+    return false;
 }
 
 function checkInput(id, varValue) {
@@ -56,11 +56,23 @@ function doTheMath() {
 
     tipAmount = billValue * (tipPercentage / 100);
     console.log('Resultado - tipAmount: ' + tipAmount);
-    document.getElementById("tip_amount_value").innerHTML = tipAmount.toFixed(2);
+    if (isNaN(tipAmount)) {
+        document.getElementById('tip_amount_value').style.color='hsl(184, 80%, 24%)';
+        document.getElementById("tip_amount_value").innerHTML = '$0.00';
+    } else {
+        document.getElementById('tip_amount_value').style.color='hsl(172, 67%, 45%)';
+        document.getElementById("tip_amount_value").innerHTML = '$'+ tipAmount.toFixed(2);
+    }
 
     totalAmount = (billValue * (1 + (tipPercentage / 100))) / peopleValue;
     console.log('Resultado - totalAmount: ' + totalAmount);
-    document.getElementById("total_amount_value").innerHTML = totalAmount.toFixed(2);
+    if (isNaN(totalAmount)) {
+        document.getElementById('total_amount_value').style.color='hsl(184, 80%, 24%)';
+        document.getElementById("total_amount_value").innerHTML = '$0.00';
+    } else {
+        document.getElementById('total_amount_value').style.color='hsl(172, 67%, 45%)';
+        document.getElementById("total_amount_value").innerHTML = '$'+ totalAmount.toFixed(2);
+    }
 }
 
 function btnReset() {
