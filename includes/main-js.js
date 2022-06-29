@@ -77,4 +77,36 @@ function doTheMath() {
 
 function btnReset() {
     alert("I'll clear all values!");
+
+    tipPercentage = 0;
+    billValue = 0;
+    peopleValue = 0;
+    tipAmount = 0;
+    totalAmount = 0;
+
+    document.getElementById("bill_value").value = '';
+    document.getElementById("people_value").value = '';
+    document.getElementById("customp").value = '';
+
+    document.getElementById('tip_amount_value').style.color='hsl(184, 80%, 24%)';
+    document.getElementById("tip_amount_value").innerHTML = '$0.00';
+
+    document.getElementById('total_amount_value').style.color='hsl(184, 80%, 24%)';
+    document.getElementById("total_amount_value").innerHTML = '$0.00';
+
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+
+    document.getElementById("customp").classList.add("active");
+
+}
+
+var header = document.getElementById("buttons_grid");
+var btns = header.getElementsByClassName("btn-act");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+  var current = document.getElementsByClassName("active");
+  current[0].className = current[0].className.replace(" active", "");
+  this.className += " active";
+  });
 }

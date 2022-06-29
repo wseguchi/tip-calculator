@@ -11,6 +11,10 @@ a {
     color:hsl(186, 14%, 43%);
 }
 
+a:hover {
+    color: #da9a35;
+}
+
 body {
     margin: 20px;
     text-align: center;
@@ -71,9 +75,16 @@ input {
 .input-bill, .input-people {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     width: 100%;
     background-color: hsl(189, 41%, 97%);
     border-radius: 5px;
+    border: 1px solid hsl(189, 41%, 97%);
+}
+
+.input-bill:hover, .input-people:hover, .custom-input:hover,
+.input-bill:active, .input-people:active, .custom-input:active  {
+    border: 1px solid #da9a35;
 }
 
 .tip-amount, .total-amount {
@@ -81,7 +92,7 @@ input {
     justify-content: space-between;
 }
 
-.bill, .buttons-grid {
+.bill, #buttons_grid {
     margin-bottom: 30px;
 }
 
@@ -99,35 +110,48 @@ input {
     padding: 3px 10px;
     background-color: transparent;
     font-family: 'Space Mono', monospace;
+    font-size: 22px;
     font-weight: 700;
-    color: hsl(184, 14%, 56%);
+    color: hsl(186, 14%, 43%);
 }
 
-.buttons-grid {
+#buttons_grid {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 10px;
 }
 
-.buttons-grid > div {
+#buttons_grid > div {
     width: 30%;
-    border-radius: 5px;
+}
+
+.btn-perc {
     background-color: hsl(183, 100%, 15%);
+}
+
+#custom_perc {
+    background-color: hsl(189, 41%, 97%);
 }
 
 button, .custom-input{
     cursor: pointer;
+    width: 100%;
     padding: 3px;
     font-family: 'Space Mono', monospace;
     font-weight: 700;
-    font-size: 20px;
+    font-size: 18px;
+    border-radius: 5px;
     border: none;
     color: white;
 }
 
-button {
-    background-color: transparent;
+button:hover {
+    background-color: #da9a35;
+}
+
+.active {
+    background-color: #da9a35;
 }
 
 .custom-input {
@@ -136,10 +160,16 @@ button {
     color: hsl(186, 14%, 43%);
     background-color:hsl(189, 41%, 97%);
     border-radius: 5px;
+    border: 1px solid hsl(189, 41%, 97%)
 }
 
 ::placeholder {
-    color: hsl(186, 14%, 43%);
+    color: hsl(184, 14%, 56%);
+}
+
+input:focus {
+    outline: none !important;
+    border-radius: 5px;
 }
 
 .zero-error-title {
