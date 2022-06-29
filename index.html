@@ -8,7 +8,7 @@
     <title>Tip Calculator App</title>
   </head>
   <body>
-    <div class="main">
+    <div id="test" class="main">
       <div class="logo">
         <img src="./images/logo.svg">
       </div>
@@ -16,13 +16,13 @@
         <div class="input">
           <div class="bill">
             <p class="input-group-titles f-left">Bill</p>
-            <p class="zero-error-title"> Can't be zero!</p>
+            <p id="bill_value_zero" class="zero-error-title"> Can't be zero!</p>
             <div class="input-bill">
               <div class="icon-dollar">
                 <img src="./images/icon-dollar.svg">
               </div>
               <div class="bill-value">
-                <input type="text" id="fname" name="fname" value="0">
+                <input id="bill_value" type="text" placeholder="0" oninput="input('bill_value', 'billValue')">
               </div>
             </div>
           </div>
@@ -30,24 +30,24 @@
             <p class="input-group-titles ">Select Tip %</p>
           </div>
           <div class="buttons-grid">
-            <div><button>5%</button></div>
-            <div><button>10%</button></div>
-            <div><button>15%</button></div>
-            <div><button>25%</button></div>
-            <div><button>50%</button></div>
+            <div><button id="5p" value="5" onclick="btnGetTipPercentage('5p')">5%</button></div>
+            <div><button id="10p" value="10" onclick="btnGetTipPercentage('10p')">10%</button></div>
+            <div><button id="15p" value="15" onclick="btnGetTipPercentage('15p')">15%</button></div>
+            <div><button id="25p" value="25" onclick="btnGetTipPercentage('25p')">25%</button></div>
+            <div><button id="50p" value="50" onclick="btnGetTipPercentage('50p')">50%</button></div>
             <div>
-              <input class="custom-input" type="text" id="fname" name="fname" value="Custom">
+              <input id="customp" class="custom-input" type="text" id="fname" name="fname" placeholder="Custom" oninput="return btnGetCustomTipPercentage(event)">
             </div>
           </div>
           <div class="number-of-people">
             <p class="input-group-titles f-left">Number of People</p>
-            <p class="zero-error-title"> Can't be zero!</p>
+            <p id="people_value_zero" class="zero-error-title"> Can't be zero!</p>
             <div class="input-people">
               <div class="icon-person">
                 <img src="./images/icon-person.svg">
               </div>
               <div class="people-value">
-                <input type="text" id="fname" name="fname" value="0">
+                <input id="people_value" type="text" placeholder="0" oninput="input('people_value', 'peopleValue')">
               </div>
             </div>
           </div>
@@ -60,7 +60,7 @@
                 <p class="output-per-person">/ person</p>
               </div>
               <div class="tip-amount-value">
-                $<span>0.00</span>
+                $<span id="tip_amount_value">0.00</span>
               </div>
             </div>
             <div class="total-amount">
@@ -69,12 +69,12 @@
                 <p class="output-per-person">/ person</p>
               </div>
               <div class="total-amount-value">
-                $<span>0.00</span>
+                $<span id="total_amount_value">0.00</span>
               </div>
             </div>
           </div>
           <div class="output-btn-reset">
-            <button class="btn-reset">Reset</button>
+            <button class="btn-reset" onclick="btnReset()">Reset</button>
           </div>
         </div>
       </div>
@@ -83,5 +83,6 @@
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
       Coded by <a href="http://www.seguchi.net">Wildson Seguchi</a>.
     </div>
+    <script src="./includes/main-js.js"></script>
   </body>
 </html>

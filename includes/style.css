@@ -110,11 +110,6 @@ input {
     gap: 10px;
 }
 
-.custom-input {
-    width: 100px;
-    text-align: center;
-}
-
 .buttons-grid > div {
     width: 30%;
     border-radius: 5px;
@@ -128,12 +123,28 @@ button, .custom-input{
     font-weight: 700;
     font-size: 20px;
     border: none;
-    background-color: transparent;
     color: white;
 }
 
+button {
+    background-color: transparent;
+}
+
+.custom-input {
+    width: 100px;
+    text-align: center;
+    color: hsl(186, 14%, 43%);
+    background-color:hsl(189, 41%, 97%);
+    border-radius: 5px;
+}
+
+::placeholder {
+    color: hsl(186, 14%, 43%);
+}
+
 .zero-error-title {
-    color: wheat;
+    display: none;
+    color: #da9a35;
     font-size: 11px;
     float: right;
 }

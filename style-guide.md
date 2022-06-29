@@ -22,6 +22,7 @@ The designs were created to the following widths:
 - Very light grayish cyan: hsl(189, 41%, 97%)
 - White: hsl(0, 0%, 100%)
 
+
 ## Typography
 
 ### Body Copy
