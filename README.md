@@ -42,6 +42,6 @@ Splittler is a WebApp that calculates the tip and total cost per person of a giv
 - [LinkedIn](https://www.linkedin.com/in/wildson-seguchi-a61325180/)
 
 
-### Frontend Mentor Challenge
+#### Frontend Mentor Challenge
 
 This is a solution to the [Tip calculator app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/tip-calculator-app-ugJNGbJUX).
