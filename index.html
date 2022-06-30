@@ -22,7 +22,7 @@
                 <img src="./images/icon-dollar.svg">
               </div>
               <div class="bill-value">
-                <input id="bill_value" type="text" placeholder="0.00" oninput="input('bill_value', 'billValue')" onkeydown="return inputMaskNumbers(event)">
+                <input id="bill_value" type="number" decimal="true" placeholder="0.00" oninput="input('bill_value', 'billValue')" onkeydown="return inputMaskNumbers(event)">
               </div>
             </div>
           </div>
@@ -36,7 +36,7 @@
             <div><button id="25p" class="btn-perc btn-act" value="25" onclick="btnGetTipPercentage('25p')">25%</button></div>
             <div><button id="50p" class="btn-perc btn-act" value="50" onclick="btnGetTipPercentage('50p')">50%</button></div>
             <div id="custom_perc">
-              <input id="customp" class="custom-input btn-act active" type="text" id="fname" name="fname" placeholder="Custom" onkeydown="return inputMaskNumbers(event)" oninput="btnGetTipPercentage('customp')">
+              <input id="customp" class="custom-input btn-act active" type="number" id="fname" name="fname" placeholder="Custom" onkeydown="return inputMaskNumbers(event)" oninput="btnGetTipPercentage('customp')">
             </div>
           </div>
           <div class="number-of-people">
@@ -47,7 +47,7 @@
                 <img src="./images/icon-person.svg">
               </div>
               <div class="people-value">
-                <input id="people_value" type="text" placeholder="0" oninput="input('people_value', 'peopleValue')" onkeydown="return inputMaskNumbers(event)">
+                <input id="people_value" type="number" placeholder="0" oninput="input('people_value', 'peopleValue')" onkeydown="return inputMaskNumbers(event)">
               </div>
             </div>
           </div>

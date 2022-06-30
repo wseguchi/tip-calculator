@@ -89,6 +89,7 @@ input {
 .tip-amount, .total-amount {
     display: flex;
     justify-content: space-between;
+    cursor: default;
 }
 
 .bill, #buttons_grid {
@@ -147,6 +148,7 @@ button, .custom-input{
 
 button:hover {
     background-color: #da9a35;
+    color: white;
 }
 
 .active {
@@ -202,7 +204,7 @@ input:focus {
 .btn-reset {
     width: 90%;
     text-transform: uppercase;
-    background-color: hsl(184, 80%, 24%);
+    background-color:hsl(172, 67%, 45%);
     color:hsl(183, 100%, 15%);
     border-radius: 5px;
     margin-bottom: 20px;
@@ -223,6 +225,16 @@ input:focus {
     color: hsl(184, 14%, 56%);
 
 }
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+  }
 
 
 @media only screen and (max-width: 820px) {

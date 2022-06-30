@@ -76,7 +76,7 @@ function doTheMath() {
 }
 
 function btnReset() {
-    alert("I'll clear all values!");
+
 
     tipPercentage = 0;
     billValue = 0;
