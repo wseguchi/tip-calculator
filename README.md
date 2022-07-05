@@ -31,7 +31,7 @@ Splittler is a WebApp that calculates the tip and total cost per person of a giv
 
 ## Links
 
-- Solution URL: [https://seguchi.net/projects/splitter](https://seguchi.net/projects/splitter)
+- Solution URL: [https://wseguchi.github.io/tip-calculator/](https://wseguchi.github.io/tip-calculator/)
 - Github: [https://github.com/wseguchi/tip_calculator](https://github.com/wseguchi/tip_calculator)
 
 
